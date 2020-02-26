@@ -1,0 +1,38 @@
+ <h2>Refactor Book</h2>
+
+
+<div class="row">
+    <form class="col s12" action="/books/edit" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="title" type="text" class="validate" name="title" value="{{books.title}}" required>
+          <span class="helper-text" data-error="title is wrong"></span>
+          <label for="title">Title</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="price" type="number" class="validate" name="price" min="1" value="{{books.price}}" required>
+          <span class="helper-text" data-error="price is wrong"></span>
+          <label for="price">Price</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="url" type="text" class="validate" name="url" value="{{books.url}}" required>
+          <span class="helper-text" data-error="url is wrong"></span>
+          <label for="url">Image Url</label>
+        </div>
+      </div>
+
+        <input type="hidden" name="_id" value="{{books._id}}">
+      <button type="submit" class="btn #4a148c purple darken-4 waves-effect">Add Book</button>
+    </form>
+  </div>
+
+  <form action="/books/remove" method="POST">
+    <input type="hidden" name="_id" value="{{books._id}}">
+    <button type="submit" class="btn red">Delete</button>
+  </form>

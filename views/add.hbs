@@ -1,0 +1,32 @@
+<h2>Add Books</h2>
+
+
+<div class="row">
+    <form class="col s12" action="/add" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="title" type="text" class="validate" name="title" required>
+          <span class="helper-text" data-error="title is wrong"></span>
+          <label for="title">Title</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="price" type="number" class="validate" name="price" min="1" required>
+          <span class="helper-text" data-error="price is wrong"></span>
+          <label for="price">Price</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="url" type="text" class="validate" name="url" required>
+          <span class="helper-text" data-error="url is wrong"></span>
+          <label for="url">Image Url</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn #4a148c purple darken-4 waves-effect">Add Book</button>
+    </form>
+  </div>
