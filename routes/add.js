@@ -14,7 +14,8 @@ router.post('/', async (req, res) => {
     const books = new Book({
         title: req.body.title,
         price: req.body.price,
-        url: req.body.url
+        url: req.body.url,
+        userId: req.user._id
     })
 
     try {

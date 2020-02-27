@@ -10,7 +10,11 @@ const bookSchema = new Schema({
         type: Number,
         required: true
     },
-    url: String
+    url: String,
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
 

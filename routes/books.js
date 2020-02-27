@@ -37,6 +37,14 @@ router.post('/edit', async (req, res) => {
 
 })
 
+router.post('/remove', async (req, res) => {
+     await Book.deleteOne({
+        _id: req.body._id
+    })
+    res.redirect('/books')
+    
+})
+
 router.get('/:_id', async (req, res) => {
    
     const books = await Book.findById(req.params._id).lean()
