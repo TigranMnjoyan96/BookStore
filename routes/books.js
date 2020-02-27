@@ -4,8 +4,9 @@ const router = Router()
 
 router.get('/', async (req, res) => {
 
-    const books = await Book.find(req.body._id).lean()
+    const books = await Book.find().lean().populate('userId', 'name email').select('title price url')
 
+    console.log(books)
     res.render('books', {
         title: 'Books',
         isBooks: true,
