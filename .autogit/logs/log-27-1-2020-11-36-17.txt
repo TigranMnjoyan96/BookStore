@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Thu Feb 27 2020 11:36:17 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* index.js
+* models/Book.js
+* routes/add.js
+* routes/books.js
+* routes/cart.js
+
+
+Created files:
+* .autogit/autogit.json
+
+
+Deleted files:
+
+
+Renamed files:
