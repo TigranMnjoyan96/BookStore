@@ -50,6 +50,10 @@ userSchema.methods.addToCart = function(book) {
 
 }
 
-userSchema.methods.
+
+userSchema.methods.removeCart = function(id) {
+    let items = [...this.cart.items]
+    const idx = items.findIndex(c => c.bookId.toString() === id.toString())
+}
 
 module.exports = model('User', userSchema)
