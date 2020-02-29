@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sat Feb 29 2020 16:34:49 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* public/app.js
+* routes/cart.js
+
+
+Created files:
+* .autogit/logs/log-29-1-2020-16-4-43.txt
+
+
+Deleted files:
+
+
+Renamed files:

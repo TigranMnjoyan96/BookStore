@@ -9,8 +9,10 @@ if(cart) {
             }).then(res => res.json())
                 .then(data => {
                     if(data.books.length) {
-                        data.books.map(item => {
-                            console.log(item)
+                        const html = data.books.map(item => {
+                            return  `
+                                
+                            `
                         })
                     } else {
                         cart.innerHTML = '<p>Cart is empty</p>'
