@@ -21,7 +21,7 @@ if(cart) {
                             `
                         }).join('')
                         cart.document.querySelector('tbody').innerHTML = html
-                        cart.document.querySelector('.price').textConent = cart.price
+                        cart.document.querySelector('.price').textConent = data.price
 
                     } else {
                         cart.innerHTML = '<p>Cart is empty</p>'
