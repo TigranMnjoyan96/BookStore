@@ -11,9 +11,18 @@ if(cart) {
                     if(data.books.length) {
                         const html = data.books.map(item => {
                             return  `
-                                
+                            <tr>
+                            <td>${item.title}</td>
+                            <td>${item.count}</td>
+                            <td>
+                                <button class="btn red remove" data-id="${item._id}" >Delete</button>
+                            </td>
+                        </tr>
                             `
-                        })
+                        }).join('')
+                        cart.document.querySelector('tbody').innerHTML = html
+                        cart.document.querySelector('.price').textConent = cart.price
+
                     } else {
                         cart.innerHTML = '<p>Cart is empty</p>'
                     }
