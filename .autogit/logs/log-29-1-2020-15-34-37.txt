@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Feb 29 2020 15:34:37 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* index.js
+* routes/cart.js
+* views/cart.hbs
+* views/partials/footer.hbs
+
+
+Created files:
+* public/app.js
+
+
+Deleted files:
+
+
+Renamed files:
