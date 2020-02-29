@@ -29,7 +29,8 @@ router.post('/add', async (req, res) => {
 
 
 router.post('/remove/:_id', async (req, res) => {
-    const cart = await Book.findById(req.params._id)
+    // const cart = await Book.findById(req.params._id)
+    await req.user.removeCart(req.params._id)
     res.status(200).json(cart)
 })
 

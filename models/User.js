@@ -50,4 +50,6 @@ userSchema.methods.addToCart = function(book) {
 
 }
 
+userSchema.methods.
+
 module.exports = model('User', userSchema)
