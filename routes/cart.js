@@ -18,6 +18,9 @@ function computePrice(price) {
     }, 0)
 }
 
+
+
+
 router.post('/add', async (req, res) => {
     const books = await Book.findById(req.body._id)
     await req.user.addToCart(books)
@@ -25,7 +28,10 @@ router.post('/add', async (req, res) => {
 })
 
 
-
+router.post('/remove/:_id', async (req, res) => {
+    const cart = await Book.findById(req.params._id)
+    res.status(200).json(cart)
+})
 
 
 router.get('/', async (req, res) => {
