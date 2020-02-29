@@ -1,7 +1,7 @@
-{{!-- <h2>Cart</h2>
+ <h2>Cart</h2>
 
 
-<div class="row">
+<div class="row" id="cart">
     {{#if books.length}}
         <table>
             <thead>
@@ -15,7 +15,7 @@
                         <td>{{title}}</td>
                         <td>{{count}}</td>
                         <td>
-                            <button class="btn red">Delete</button>
+                            <button class="btn red remove" data-id="{{_id}}" >Delete</button>
                         </td>
                     </tr>
                 {{/each }}
@@ -25,4 +25,4 @@
     {{else }}
         <strong>Books aren't yet</strong>
     {{/if}}
-</div> --}}
+</div>
