@@ -8,6 +8,7 @@ if(cart) {
                 method: 'delete'
             }).then(res => res.json())
                 .then(data => {
+                    console.log(data)
                     if(data.books.length) {
                         const html = data.books.map(item => {
                             return  `
@@ -15,7 +16,7 @@ if(cart) {
                             <td>${item.title}</td>
                             <td>${item.count}</td>
                             <td>
-                                <button class="btn red remove" data-id="${item._id}" >Delete</button>
+                                <button class="btn red remove" data-id="${item.id}" >Delete</button>
                             </td>
                         </tr>
                             `
