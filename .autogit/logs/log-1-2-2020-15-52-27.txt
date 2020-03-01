@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sun Mar 01 2020 15:52:27 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* routes/books.js
+* routes/cart.js
+
+
+Created files:
+* .autogit/logs/log-1-2-2020-15-22-20.txt
+
+
+Deleted files:
+
+
+Renamed files:
