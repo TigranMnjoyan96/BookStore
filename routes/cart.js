@@ -8,7 +8,6 @@ const router = Router()
 function mapCartItems(cart) {
     return cart.items.map(c => ({
         ...c.bookId._doc,
-        id: c.bookId.id,
         count: c.count
     }))
 }
@@ -31,9 +30,10 @@ router.post('/add', async (req, res) => {
 
 
 router.delete('/remove/:_id', async (req, res) => {
-    await req.user.removeCart(req.user.id)
 
-    console.log(req.user.id, 'alskdmvlskdmvlsdkvm')
+    await req.user.removeCart(req.params._id)
+
+   
     const user = await req.user.populate('cart.items.bookId').execPopulate()
 
     const books = mapCartItems(user.cart)

@@ -53,9 +53,11 @@ userSchema.methods.addToCart = function(book) {
 
 userSchema.methods.removeCart = function(id) {
     let items = [...this.cart.items]
+    console.log(items)
+    
     const idx = items.findIndex(c => c.bookId.toString() === id.toString())
 
-
+    console.log(items[idx].count)
     if(items[idx].count === 1) {
         items = items.filter(c => c.bookId.toString() !== id.toString())
     } else {
