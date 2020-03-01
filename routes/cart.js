@@ -15,7 +15,7 @@ function mapCartItems(cart) {
 
 function computePrice(price) {
     return price.reduce((p, t) => {
-        return p += t.price * t.count
+        console.log(p, t.price, t.count)
     }, 0)
 }
 

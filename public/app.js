@@ -7,6 +7,7 @@ if(cart) {
             fetch('/cart/remove/' + id, {
                 method: 'delete'
             }).then(res => res.json()).then(data => {
+                console.log(data)
                     if(data.books.length) {
                         const html = data.books.map(item => {
                             return  `
@@ -14,13 +15,13 @@ if(cart) {
                             <td>${item.title}</td>
                             <td>${item.count}</td>
                             <td>
-                                <button class="btn red remove" data-id="${item.id}" >Delete</button>
+                                <button class="btn red remove" data-id="${item._id}" >Delete</button>
                             </td>
                         </tr>
                             `
                         }).join('')
                         cart.querySelector('tbody').innerHTML = html
-                        cart.querySelector('.price').textConent = data.price
+                        // cart.querySelector('.price').textConent = data.price
 
                     } else {
                         cart.innerHTML = '<p>Cart is empty</p>'
