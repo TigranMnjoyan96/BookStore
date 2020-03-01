@@ -32,10 +32,11 @@ router.post('/add', async (req, res) => {
 
 router.delete('/remove/:_id', async (req, res) => {
     
-   const a =  await req.user.removeCart(req.params._id)
-   console.log(a, 'aaaa')
+    await req.user.removeCart(req.params._id)
 
-    const user = req.user.populate('cart.items.userId').execPopulate()
+    const user = req.user.populate('cart.items.userId')
+    console.log(user, 'user')
+
     const books = mapCartItems(user.books)
 
     const cart = {
