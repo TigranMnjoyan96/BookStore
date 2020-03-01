@@ -18,4 +18,12 @@ const bookSchema = new Schema({
 })
 
 
+bookSchema.method('toClient', function() {
+    const book = this.toObject()
+
+    book.id = book._id
+    delete book._id
+
+    return book
+})
 module.exports = model('Book', bookSchema)

@@ -6,9 +6,10 @@ if(cart) {
             const id = event.target.dataset.id
             fetch('/cart/remove/' + id, {
                 method: 'delete'
-            }).then(res => res.json())
+            }).then(res => {
+                res.json()
+            })
                 .then(data => {
-                    console.log(data)
                     if(data.books.length) {
                         const html = data.books.map(item => {
                             return  `
